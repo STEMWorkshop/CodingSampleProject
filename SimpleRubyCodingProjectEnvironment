@@ -1,0 +1,348 @@
+
+
+
+# effects method
+def effects
+    puts "Choose an event to know its effects to our society.\n"
+    puts "Choice 1: Deforestation"
+    puts "Choice 2: Smoke from vehicles"
+    puts "Choice 3: Plastic garbages thrown anywhere"
+    puts "Choice 4: To go back to the ongoing events\n"
+    b=gets.to_i
+    if b==1
+        puts "This can cause floods and soil erosion.\n\n"
+        effects
+    elsif b==2
+        puts "This can pollute the air which can affect our health.It will be harder to breath.\n\n"
+        effects
+    elsif b==3
+        puts "These garbages can harm the living organisms both in the water and the land. Plastics are non-biodegradable.\n\n"
+        effects
+    elsif b==4
+        story_begin
+    else
+        puts "Press 1 to 4 only. Please try again.\n"
+        effects
+    end
+end
+
+# cause method
+def cause
+    puts "\nChoose an event to know its causes.\n"
+    puts "Choice 1: Global Warming"
+    puts "Choice 2: Dirty Water"
+    puts "Choice 3: Animal extinction"
+    puts "Choice 4: To go back to the ongoing events"
+    c=gets.to_i
+    if c==1
+        puts "This is caused by illegal cutting of trees. Trees provide oxygen and absorb carbon dioxide.\n"
+        cause
+    elsif c==2
+        puts "This is caused by throwing of dirty garbages including harmful chemicals into the water.\n"
+        cause
+    elsif c==3
+        puts "This is caused by illegal hunting and smuggling of rare animal species.\n"
+        cause
+    elsif c==4
+        story_begin
+    else
+        puts "Press 1 to 4 only. Please try again."
+        cause
+
+    end
+end
+
+# solution method
+def solution
+    puts "\nChoose a particular issue to know its preferred solution.\n"
+    puts "Choice 1: Flooding"
+    puts "Choice 2: Drought"
+    puts "Choice 3: Diseases"
+    puts "Choice 4: To go back to the ongoing events"
+    w=gets.to_i
+    if w==1
+        puts "Please plant trees and stop illegal logging.\n"
+        solution
+    elsif w==2
+        puts "Please conserve and stop polluting water.\n"
+        solution
+    elsif w==3
+        puts "Keep the surroundings clean and manage waste properly.\n"
+        solution
+    elsif w==4
+        story_begin
+    else
+        puts "Press 1 to 4 only. Please try again."
+      solution
+
+    end
+end
+
+
+# quiz_ready method
+def quiz_ready
+    puts "\nYou can check your environmental knowledge by taking this short quiz. If ready, please press one otherwise press anything.\n"
+  
+    q=gets.to_i
+
+    if q == 1
+        quiz_start
+    elsif
+    #puts "You may take the quiz next time when ready.\n\n"
+        story_begin
+    end
+    
+end
+
+
+#quiz_start method
+def quiz_starta
+    puts "Question 1: What is one of the best ways to solve environmental pollution?\n\n"
+    puts "Choice 1: Use a recyable or biogradable material."
+    puts "Choice 2: Throw the plastics to the water or just anywhere"
+    puts "Choice 3: Smoke a cigar with many people around."
+
+    m=gets.to_i
+    if m== 1
+         puts "Your answer is correct. Very Good!"
+    elsif m == 2
+         puts "The best answer is Choice 1."
+   elsif m == 3
+         puts "The best answer is Choice 1."
+   else
+    puts "Press 1 to 3 only. Try again!"
+    quiz_starta
+    end
+end
+
+    
+def quiz_startb
+    puts "\n\nQuestion 2: What should be done if many trees are cut-down?\n\n"
+    puts "Choice 1: Just let it be."
+    puts "Choice 2: Plant new trees again."
+    puts "Choice 3: Use the logs to get more money and cut more trees without replacing it."
+
+    m=gets.to_i
+    if m== 1
+         puts "The best answer is Choice 2."
+    elsif m == 2
+          puts "Your answer is correct. Very Good!"
+   elsif m == 3
+         puts "The best answer is Choice 2."
+   else
+    puts "Press 1 to 3 only. Try again!"
+    quiz_startb
+    end
+
+end
+
+
+
+def quiz_startc
+    puts "\n\nQuestion 3: Burning coal can pollute the air. What is the best alternative?\n\n"
+    puts "Choice 1: There is no alternative."
+    puts "Choice 2: Use other minerals instead."
+    puts "Choice 3: Use new renewable energy source technologies such as the wind turbine and solar panel. "
+
+    m=gets.to_i
+    if m== 1
+         puts "The best answer is Choice 3."
+    elsif m == 2
+         puts "The best answer is Choice 3."
+   elsif m == 3
+         puts "Your answer is correct. Very Good!"
+   else
+    puts "Press 1 to 3 only. Try again!"
+    quiz_startc
+    end
+
+end
+
+def quiz_start
+     quiz_starta
+
+     quiz_startb
+
+     quiz_startc
+
+    puts "Thanks for taking the short quiz."
+     story_begin
+end
+
+#quiz_start method
+def conversion
+    puts "\n\nAs you travel around and explore the natural surroundings, you need help with some mathematical quantities. Here are some conversions that you may need.\n\n"
+    puts "Choice 1: The weather is getting hotter due to climate change. You want to change the temperature readings from fahrenheit to celsius."
+    puts "Choice 2: The flood water level is rising quickly as there are no trees. You want to measure the water depth from inches to feet."
+    puts "Choice 3: The storm is approaching and the wind is getting stronger. You are eager to measure its speed from miles per hour to kilometers per hour."
+    puts "Press 4 to leave this conversion."
+    h=gets.to_i
+    if h== 1
+       conversiona
+    elsif h == 2
+       conversionb
+   elsif h == 3
+       conversionc
+    elsif h == 4
+      story_begin
+   else
+    puts "Press 1 to 4 only. Try again!"
+    conversion
+    end
+end
+
+
+def conversiona
+begin
+    puts "Please enter the temperature reading in fahrenheit."
+    x=gets.chomp
+    x=Float(x)
+    puts "Valid Input"
+    puts "The value that you entered is #{x}"
+    puts "The temperature in degree celsius is #{(x-32)*5/9}"
+    rescue ArgumentError, TypeError
+    puts "Invalid Input. Enter a number only. Try Again from the start!"
+    conversiona
+end
+    conversion
+end
+
+
+
+
+def conversionb
+begin
+    puts "Please enter the water depth in inches."
+    q=gets.chomp
+    q=Float(q)
+    puts "Valid Input"
+    puts "The value that you entered is #{q}"
+    puts "The depth in feet is #{q/12}"
+    rescue ArgumentError, TypeError
+    puts "Invalid Input. Enter a number only. Try Again from the start!"
+    conversionb
+end
+    conversion
+end
+
+
+
+
+def conversionc
+
+begin
+puts "Please enter the wind speed in miles per hour."
+u=gets.chomp
+u=Float(u)
+puts "Valid Input"
+puts "The value that you entered is #{u}"
+puts "The wind speed in kilometers per hour is #{u*1.6093440}"
+rescue ArgumentError, TypeError
+puts "Invalid Input. Enter a number only. Try Again from the start!"
+conversionc
+end
+    conversion
+end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+def main
+   
+    puts "\n\nWelcome to the Choose Your Own Coding Environmental Adventure Story!\n\n"
+    puts "You have to decide which adventure to take."
+    puts "Are you ready for an exciting adventure? If yes, choose 1 and if not, press something else to leave this program."
+
+    a=gets.to_i
+
+    if a == 1
+        story_begin # calling story_begin method
+    elsif
+        puts "You may have your adventure next time then. Bye and have a good day!"
+
+    end
+
+end
+
+# story_begin method
+def story_begin
+    puts "\n\nLet us begin inside your house. You are about to travel and explore the nature's beauty. Before the journey, you want to know what is going on first with the environment as you heard from the news.\n\n"
+    puts "To know about the situation, please choose among the choices."
+    puts "Choice 1: Know the effects of the ongoing events."
+    puts "Choice 2: Know the causes of ongoing events."
+    puts "Choice 3: Know the preferred solutions."
+    puts "Choice 4: Take a check-up quiz."
+    puts "Choice 5: Have some mathematical conversions related to the environment."
+    puts "Choice 6: Leave this program."
+
+    z=gets.to_i
+
+    if z == 1
+        effects
+        # calling school method
+    elsif z==2
+        cause
+    elsif z==3
+        solution
+    elsif z==4
+        quiz_ready
+    elsif z==5
+        conversion
+    elsif z==6
+       puts "Hope you have an exciting adventure. You can come back anytime."
+       exit
+    else
+        puts "Press 1 to 6 only. Try again!"
+        story_begin
+    end
+end
+
+
+# calling main method
+main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
