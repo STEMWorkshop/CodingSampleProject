@@ -172,7 +172,7 @@ def conversion():
 	print ('\n\nAs you travel around and explore the natural surroundings, you need help with some mathematical quantities. Here are some conversions that you may need.\n')
 	print ('Choice 1: The weather is getting hotter due to climate change. You want to change the temperature readings from fahrenheit to celsius.')
 	print ('Choice 2: The flood water level is rising quickly as there are no trees. You want to measure the water depth from inches to feet.')
-	print ("Choice 3: The storm is approaching and the wind is getting stronger. You are eager to measure its speed from miles per second to kilometers per hour.")
+	print ("Choice 3: The storm is approaching and the wind is getting stronger. You are eager to measure its speed from miles per hour to kilometers per hour.")
 	print ('Press 4 to leave this conversion.')
 
 	h=input('Enter a number:')
